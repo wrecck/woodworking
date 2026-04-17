@@ -1,0 +1,7 @@
+node_modules
+dist
+materials
+.DS_Store
+*.local
+.env
+.env.*
