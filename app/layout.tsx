@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Libre_Baskerville, Montserrat } from 'next/font/google'
+import Script from 'next/script'
 import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/JsonLd'
 import { getMetadataBase } from '@/lib/site'
 import './globals.css'
@@ -74,6 +75,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${montserrat.variable} ${libreBaskerville.variable}`}>
       <body className={montserrat.className}>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NGRK054F7L" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NGRK054F7L');
+          `}
+        </Script>
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         {children}
