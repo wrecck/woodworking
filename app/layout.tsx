@@ -75,13 +75,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${montserrat.variable} ${libreBaskerville.variable}`}>
       <body className={montserrat.className}>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NGRK054F7L" strategy="afterInteractive" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-06HC02NCJC" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-NGRK054F7L');
+            gtag('config', 'G-06HC02NCJC');
           `}
         </Script>
         <OrganizationJsonLd />
