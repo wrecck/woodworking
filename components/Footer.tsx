@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const links = [
-  { label: 'About us', href: '#about' },
-  { label: 'Free plans', href: '#free-plans' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact us', href: '#contact' },
+  { label: 'Woodworking blogs', href: '/#woodworking-blogs' },
+  { label: 'Free plans', href: '/#download-plans' },
+  { label: 'About us', href: '/about' },
+  { label: 'Contact us', href: '/contact' },
 ] as const
 
 function IconFacebook() {

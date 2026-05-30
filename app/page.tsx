@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import { HomePage } from '@/components/HomePage'
 
 export const metadata: Metadata = {
-  title: 'Custom Woodworking & Furniture in New York',
+  title: 'Free Woodworking Plans & DIY Projects | Custom Wood Furniture New York',
   description:
-    'Quality custom wood furniture, built-ins, school projects, and toys from a trusted family-owned New York studio. See pricing, testimonials, and request a quote.',
+    'Best of Wood Projects offers free easy woodworking plans, DIY project guides, and custom wood furniture from a family-owned New York studio. Download plans and read our woodworking blogs.',
   alternates: { canonical: '/' },
   openGraph: {
     url: '/',
-    title: 'Best of Wood Projects | Custom Woodworking & Furniture in New York',
+    title: 'Best of Wood Projects | Free Woodworking Plans & Custom Furniture',
     description:
-      'Quality custom wood furniture, built-ins, school projects, and toys from a trusted family-owned New York studio.',
+      'Download free easy woodworking plans and explore DIY project blogs from a trusted family-owned New York wood studio.',
   },
 }
 

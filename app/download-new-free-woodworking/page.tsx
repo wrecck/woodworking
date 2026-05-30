@@ -4,15 +4,15 @@ import { Header } from '@/components/Header'
 import { DownloadPlansArticle } from '@/components/DownloadPlansArticle'
 
 export const metadata: Metadata = {
-  title: 'Download Free Woodworking Plans for the DIY Woodworker',
+  title: 'New Wood Working Plans — Download Free DIY Woodworking Plans',
   description:
-    'Download free woodworking plans for the DIY woodworker. Easy projects, cut lists, and step-by-step guides for workbenches, tables, shelves, and more.',
-  alternates: { canonical: '/download-free-woodworking-plans-for-the-diy-woodworker' },
+    'Download new free woodworking plans for the DIY woodworker. Easy, economical projects with cut lists and step-by-step instructions from Best of Wood Projects.',
+  alternates: { canonical: '/download-new-free-woodworking' },
   openGraph: {
-    url: '/download-free-woodworking-plans-for-the-diy-woodworker',
-    title: 'Download Free Woodworking Plans for the DIY Woodworker',
+    url: '/download-new-free-woodworking',
+    title: 'New Wood Working Plans | Free DIY Woodworking Downloads',
     description:
-      'Free woodworking plans with cut lists and instructions for DIY builders. Save money and build faster.',
+      'Get new free woodworking plans for DIY builders. Workbenches, coffee tables, shelves, and beginner-friendly projects.',
   },
 }
 
@@ -25,9 +25,9 @@ export default function Page() {
         <section className="download-plans" aria-label="Page content">
           <div className="container">
             <div className="download-plans__inner" style={{ maxWidth: '780px' }}>
-              <h1 className="section-title">Download Free Woodworking Plans for the DIY Woodworker</h1>
+              <h1 className="section-title">New Wood Working Plans</h1>
               <hr className="accent-line" />
-              <DownloadPlansArticle ctaHref="/#download-plans" />
+              <DownloadPlansArticle ctaHref="/#download-plans" ctaLabel="Download New Free Woodworking Plans" />
             </div>
           </div>
         </section>
@@ -37,4 +37,3 @@ export default function Page() {
     </>
   )
 }
-

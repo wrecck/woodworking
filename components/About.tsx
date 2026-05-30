@@ -32,8 +32,8 @@ export function About() {
             <li>Raw materials from suppliers we trust.</li>
             <li>Traditional craft paired with precise, modern fabrication.</li>
           </ul>
-          <a className="video-link" href="#testimonials">
-            Watch Our Video →
+          <a className="video-link" href="/#download-plans">
+            Download Free Plans →
           </a>
         </div>
       </div>

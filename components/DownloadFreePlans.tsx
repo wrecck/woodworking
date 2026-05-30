@@ -7,7 +7,7 @@ function optInSaveUrl(): string {
 
 export function DownloadFreePlans() {
   return (
-    <section className="download-plans" id="free-plans" aria-labelledby="free-plans-heading">
+    <section className="download-plans" id="download-plans" aria-labelledby="free-plans-heading">
       <div className="container">
         <div className="download-plans__inner">
           <h2 id="free-plans-heading" className="section-title">

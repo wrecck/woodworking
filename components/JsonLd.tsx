@@ -62,3 +62,29 @@ export function WebSiteJsonLd() {
   }
   return <JsonLdScript data={data} />
 }
+
+export function ArticleJsonLd({
+  title,
+  description,
+  url,
+  image,
+}: {
+  title: string
+  description: string
+  url: string
+  image: string
+}) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    url,
+    image,
+    author: { '@id': `${getMetadataBase().origin}/#organization` },
+    publisher: { '@id': `${getMetadataBase().origin}/#organization` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage: 'en-US',
+  }
+  return <JsonLdScript data={data} />
+}

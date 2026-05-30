@@ -4,11 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-const nav = [
-  { label: 'About us', href: '#about' },
-  { label: 'Free plans', href: '#free-plans' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact us', href: '#contact' },
+const navLeft = [
+  { label: 'About us', href: '/about' },
+  { label: 'Contact us', href: '/contact' },
+] as const
+
+const navRight = [
+  { label: 'Woodworking blogs', href: '/#woodworking-blogs' },
+  { label: 'Free plans', href: '/#download-plans' },
 ] as const
 
 export function Header() {
@@ -17,6 +20,27 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
+        <div
+          id="site-nav"
+          className={`site-header__nav-group${open ? ' site-header__nav-group--open' : ''}`}
+        >
+          <nav className="site-header__nav site-header__nav--left" aria-label="Primary left">
+            {navLeft.map(({ label, href }) => (
+              <a key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </a>
+            ))}
+          </nav>
+
+          <nav className="site-header__nav site-header__nav--right" aria-label="Primary right">
+            {navRight.map(({ label, href }) => (
+              <a key={href} href={href} onClick={() => setOpen(false)}>
+                {label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
         <Link className="site-header__brand" href="/" aria-label="Best of Wood Projects home">
           <Image
             className="site-header__logo"
@@ -37,22 +61,6 @@ export function Header() {
         >
           Menu
         </button>
-
-        <nav
-          id="site-nav"
-          className={`site-header__nav${open ? ' site-header__nav--open' : ''}`}
-          aria-label="Primary"
-        >
-          {nav.map(({ label, href }) => (
-            <a key={href} href={href} onClick={() => setOpen(false)}>
-              {label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="site-header__phones" aria-label="Phone numbers">
-          +1 (234) 567 89 00 <span aria-hidden="true"> | </span> +1 (234) 567 89 01
-        </div>
       </div>
     </header>
   )
